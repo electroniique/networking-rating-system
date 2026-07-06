@@ -3,6 +3,15 @@ import tkinter as tk
 from tkinter import ttk, messagebox
 
 # https://rateyourmusic.com/~Networking
+# very much assisted by GPT
+# sonic density = S
+# structural unity = G
+# enjoyability = X
+# lyrical performance = L
+# vocal performance = W
+# S, G, X, L, W ∈ [0, 1]
+# heteronomy = H
+# H ∈ (0, 1]
 
 def clamp(x, low, high):
     return max(low, min(high, x))
@@ -96,13 +105,13 @@ def calculate():
 
 
 root = tk.Tk()
-root.title("Ontological Rating System")
+root.title("Rating System")
 root.geometry("460x560")
 root.resizable(False, False)
 
 title = ttk.Label(
     root,
-    text="Ontological Rating Calculator",
+    text="Rating Calculator",
     font=("Arial", 16, "bold")
 )
 title.pack(pady=18)

@@ -21,10 +21,10 @@ def compute_Q(S, G, X, L, W):
     """
     S, G, X, L, W ∈ [0, 1]
 
-    원래 Q:
+    original Q:
     S^1.3 + G^1.1 + X + (L+W)^0.75
 
-    최대값:
+    maximum:
     1 + 1 + 1 + 2^0.75
     """
     raw_Q = S**1.3 + G**1.1 + X + (L + W)**0.75
@@ -39,9 +39,7 @@ def compute_Q(S, G, X, L, W):
 def compute_rating(S, G, X, L, W, H):
     """
     H ∈ [0, 1]
-    Heteronomy는 감점항.
-
-    Q가 높고 H가 낮을수록 평점 상승.
+    the lower the H, the higher the total score
     """
     Q = compute_Q(S, G, X, L, W)
 
